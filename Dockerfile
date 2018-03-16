@@ -5,7 +5,8 @@ ENV BUILD_PACKAGES="build-base bash" \
     RUBY_PACKAGES="ruby-json yaml nodejs yarn" \
     RAILS_ROOT="/myapp"
 
-RUN apk update && apk add --no-cache \
+RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories \
+    && apk update && apk add --no-cache \
     $BUILD_PACKAGES \
     $DEV_PACKAGES \
     $RUBY_PACKAGES \
