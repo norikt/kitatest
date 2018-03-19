@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.3.1",
+    "normalize.css": "^8.0.0",
     "rails-ujs": "^5.1.5",
     "turbolinks": "^5.1.1",
     "vue": "^2.5.15",
@@ -10,7 +11,42 @@
     "vue-template-compiler": "^2.5.15",
     "vue-turbolinks": "^2.0.1"
   },
+  "scripts": {
+    "lint-staged": "$(yarn bin)/lint-staged"
+  },
+  "lint-staged": {
+    "config/webpack/**/*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "frontend/**/*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "frontend/**/*.css": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.11.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-standard": "^18.2.0",
     "webpack-dev-server": "2.11.2"
   }
 }
