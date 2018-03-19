@@ -28,11 +28,11 @@ module Myapp
     # the framework and any gems in your application.
 
     config.generators do |g|
-      g.test_framework  false
       g.stylesheets     false
       g.javascripts     false
       g.helper          false
       g.channel         assets: false
+      g.jbuilder          false
     end
   end
 end
