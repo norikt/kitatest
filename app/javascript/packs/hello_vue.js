@@ -62,7 +62,6 @@ import App from '../app.vue'
 Vue.use(TurbolinksAdapter)
 
 document.addEventListener('turbolinks:load', () => {
-  alert('turbolinks:load')
   const app = new Vue({
     el: '#hello',
     data: {
