@@ -3,9 +3,12 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^3.3.1",
+    "rails-ujs": "^5.1.5",
+    "turbolinks": "^5.1.1",
     "vue": "^2.5.15",
     "vue-loader": "^14.2.1",
-    "vue-template-compiler": "^2.5.15"
+    "vue-template-compiler": "^2.5.15",
+    "vue-turbolinks": "^2.0.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
